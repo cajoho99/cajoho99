@@ -1,0 +1,751 @@
+/*CSS Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Main Code starts here*/
+
+body{
+  overflow:hidden;
+  background-image: url("images/spaceBackground.jpg");
+  width: auto;
+	z-index: 0;
+}
+html, body{
+	height:100%;
+}
+#kspLogo{
+  float:left;
+  width:15%;
+}
+#kspLogo:hover{
+	transform: scale(0.9,0.9);
+}
+a, a:hover, a:visited{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: white;
+	text-decoration: none;
+}
+nav{
+  width: 80%;
+  height: 10%;
+  position:fixed;
+  bottom:0;
+  left:50%;
+  transform: translateX(-50%);
+  background-image: url("images/mainNav.png");
+  background-size: cover;
+	z-index: 1;
+
+}
+#navContainer{
+	width:76%;
+	height: 80%;
+	position: fixed;
+	margin: auto;
+	left:50%;
+	transform: translateX(-50%);
+	text-align: justify;
+	text-justify: distribute-all-lines;
+}
+#navPlanetContainer{
+	width:76%;
+	height: 80%;
+	position: fixed;
+	margin: auto;
+	left:50%;
+	transform:translateX(-50%);
+	text-align: justify;
+	text-justify: distribute-all-lines;
+}
+#menuContainer{
+	width:100%;
+	height:100%;
+	padding: 0.5%;
+	position: relative;
+}
+.PlanetContainerBorder{
+	height:100%;
+	width: auto;
+	vertical-align: top;
+  display: inline-block;
+  *display: inline;
+	z-index: 1;
+}
+.PlanetContainer{
+	height:100%;
+	width: auto;
+	vertical-align: top;
+  display: inline-block;
+  *display: inline;
+	margin: 0 0.6%;
+	z-index: 100;
+}
+.stretch{
+	width: 100%;
+	display: inline-block;
+	font-size: 0;
+	line-height: 0;
+}
+.speedSlider{
+  width:3%;
+  height:40%;
+  position: fixed;
+  right:0;
+  top:50%;
+  transform:translateY(-50%);
+  background-image: url("images/sliderBase.png");
+  background-size: cover;
+}
+section{
+  width: 80%;
+  height: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+	z-index: 1;
+}
+.systemContainer{
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+
+	width: 100%;
+	height:40%;
+	z-index: 2;
+
+}
+
+.systemContainer #kerbol {
+  width: 4%;
+  position:absolute;
+  top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	z-index: 8;
+}
+.systemContainer #kerbol:hover{
+	width: 6%;
+	margin-left: 37%;
+	margin-top: 17%;
+}
+
+/* Moho */
+.systemContainer #mohoPath{
+  position:absolute;
+  border-radius: 50%;
+  border: 2px solid #664B2E;
+  box-sizing: border-box;
+  width:10%;
+  padding:5%;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	z-index: 7;
+	/*padding = r / 2*/
+}
+ #mohoCover{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #664B2E;
+	visibility: visible;
+	position: fixed;
+}
+ #mohoContainer{
+	width: 12%;
+	height: 12%;
+	top: 44%;
+	left:44%;
+	position: absolute;
+	animation: mohoRotation 10s infinite linear;*/
+	background-image: url("images/planets/Moho.png");
+	background-size: contain;
+	z-index: 200;
+}
+#moho{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	transform-origin: center;
+}
+ #mohoContainer p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: white;
+	text-align: center;
+ 	top:50%;
+ 	cursor: pointer;
+ 	width: auto;
+ 	height: auto;
+	transform: translateY(-50%) translateX(-35%);
+ 	position: absolute;
+ 	visibility: hidden;
+}
+ #mohoContainer:hover {
+	animation-play-state:paused;
+}
+ #mohoContainer:hover > p{
+	visibility: visible;
+}
+ #mohoContainer:hover > #mohoCover{
+	visibility: hidden;
+}
+#mohoContainer:hover > #moho{
+	transform: scale(4,4);
+}
+@keyframes mohoRotation {
+	from{
+		transform: rotate(0deg)
+							translate(415%)/*radius of the circle, should be set in JS*/
+							rotate(0deg);
+
+	}
+	to{
+		transform: rotate(360deg)
+							translate(415%)
+							rotate(-360deg);
+	}
+}
+
+/* Eve */
+.systemContainer #evePath{
+  position:absolute;
+  border-radius: 50%;
+  border: 2px solid #473852;
+  box-sizing: border-box;
+  width:10%;
+  padding:7%;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	z-index: 6;
+
+	/*padding = r * 2*/
+}
+ #eveContainer{
+	width: 8%;
+	height: 8%;
+	top: 46%;/*JS*/
+	left: 46%;
+	position: absolute;
+	animation: eveRotation 13s infinite linear;
+	background-image: url("images/planets/Eve.png");
+	background-size: contain;
+	z-index: 200;
+}
+ #eveCover{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #473852;
+	visibility: visible;
+	position: fixed;
+}
+#eve{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	transform-origin: center;
+}
+ #eveContainer p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: white;
+	text-align: center;
+	top:50%;
+	cursor: pointer;
+	width: auto;
+	height: auto;
+	transform: translateY(-50%) translateX(-35%);
+	position: absolute;
+	visibility: hidden;
+}
+ #eveContainer:hover {
+	animation-play-state:paused;
+}
+ #eveContainer:hover > p{
+	visibility: visible;
+}
+ #eveContainer:hover > #eveCover{
+	visibility: hidden;
+}
+#eveContainer:hover > #eve{
+	transform: scale(4,4);
+}
+@keyframes eveRotation {
+	from{
+		transform: rotate(0deg)
+							translate(630%)/*radius of the circle, should be set in JS*/
+							rotate(0deg);
+
+	}
+	to{
+		transform: rotate(360deg)
+							translate(630%)
+							rotate(-360deg);
+	}
+}
+/* Kerbin */
+.systemContainer #kerbinPath{
+  position:absolute;
+  border-radius: 50%;
+  border: 2px solid #698DAA;
+  box-sizing: border-box;
+  width:10%;
+  padding:9%;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+	/*padding = r * 2*/
+}
+ #kerbinCover{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #698DAA;
+	visibility: visible;
+	position: fixed;
+}
+ #kerbinContainer{
+	width: 7%;
+	height: 7%;
+	top: 46.5%;/*JS*/
+	left: 46.5%;
+	position: absolute;
+	animation: kerbinRotation 18s infinite linear;
+	background-image: url("images/planets/Kerbin.png");
+	background-size: contain;
+	z-index: 200;
+}
+#kerbin{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	transform-origin: center;
+}
+ #kerbinContainer p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: white;
+	text-align: center;
+	top:50%;
+	cursor: pointer;
+ 	width: auto;
+ 	height: auto;
+	transform: translateY(-50%) translateX(-35%);
+ 	position: absolute;
+	visibility: hidden;
+}
+ #kerbinContainer:hover {
+	animation-play-state:paused;
+}
+ #kerbinContainer:hover > p{
+	visibility: visible;
+}
+ #kerbinContainer:hover > #kerbinCover{
+	visibility: hidden;
+}
+#kerbinContainer:hover > #kerbin{
+	transform: scale(4,4)
+}
+@keyframes kerbinRotation {
+	from{
+		transform: rotate(0deg)
+							translate(715%)/*radius of the circle, should be set in JS*/
+							rotate(0deg);
+
+	}
+	to{
+		transform: rotate(360deg)
+							translate(715%)
+							rotate(-360deg);
+	}
+}
+
+/* Duna */
+.systemContainer #dunaPath{
+  position:absolute;
+  border-radius: 50%;
+  border: 2px solid #602B19;
+  box-sizing: border-box;
+  width:10%;
+  padding:11%;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	z-index: 4;
+	/*padding = r * 2 */
+}
+ #dunaCover{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #602B19;
+	visibility: visible;
+	position: fixed;
+}
+ #dunaContainer{
+	width: 6%;
+	height: 6%;
+	top: 47%;
+	left: 47%;
+	position: absolute;
+	animation: dunaRotation 24s infinite linear;
+	background-image: url("images/planets/Duna.png");
+	background-size: contain;
+	z-index: 200;
+}
+#duna{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	transform-origin: center;
+}
+ #dunaContainer p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: white;
+	text-align: center;
+	top:50%;
+	cursor: pointer;
+ 	width: auto;
+ 	height: auto;
+	transform: translateY(-50%) translateX(-35%);
+ 	position: absolute;
+	visibility: hidden;
+}
+ #dunaContainer:hover {
+	animation-play-state:paused;
+}
+ #dunaContainer:hover > p{
+	visibility: visible;
+}
+ #dunaContainer:hover > #dunaCover{
+	visibility: hidden;
+}
+#dunaContainer:hover > #duna{
+	transform: scale(4,4);
+}
+@keyframes dunaRotation {
+	from{
+		transform: rotate(0deg)
+							translate(835%)/*radius of the circle, should be set in JS*/
+							rotate(0deg);
+
+	}
+	to{
+		transform: rotate(360deg)
+							translate(835%)
+							rotate(-360deg);
+	}
+}
+
+/* Dres */
+.systemContainer #dresPath{
+  position:absolute;
+  border-radius: 50%;
+  border: 2px solid #A7A09F;
+  box-sizing: border-box;
+  width:10%;
+  padding:14%;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	/*padding = r * 2 */
+}
+ #dresCover{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #A7A09F;
+	visibility: visible;
+	position: fixed;
+}
+ #dresContainer{
+	width: 5%;
+	height: 5%;
+	top: 47.5%;/*JS*/
+	left: 47.5%;
+	position: absolute;
+	animation: dresRotation 34s infinite linear;
+	background-image: url("images/planets/Dres.png");
+	background-size: contain;
+	z-index: 200;
+}
+#dres{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	transform-origin: center;
+}
+ #dresContainer p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: white;
+	text-align: center;
+	top:50%;
+	cursor: pointer;
+ 	width: auto;
+ 	height: auto;
+	transform: translateY(-50%) translateX(-35%);
+ 	position: absolute;
+	visibility: hidden;
+}
+ #dresContainer:hover {
+	animation-play-state:paused;
+}
+ #dresContainer:hover > p{
+	visibility: visible;
+}
+ #dresContainer:hover > #dresCover{
+	visibility: hidden;
+}
+#dresContainer:hover > #dres{
+	transform: scale(4,4);
+}
+@keyframes dresRotation {
+	from{
+		transform: rotate(0deg)
+							translate(1000%)/*radius of the circle, should be set in JS*/
+							rotate(0deg);
+
+			}
+			to{
+				transform: rotate(360deg)
+							translate(1000%)
+							rotate(-360deg);
+	}
+}
+
+/* Jool */
+.systemContainer #joolPath{
+  position:absolute;
+  border-radius: 50%;
+  border: 2px solid #336100;
+  box-sizing: border-box;
+  width:10%;
+  padding:17%;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+ #joolCover{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #336100;
+	visibility: visible;
+	position: fixed;
+}
+ #joolContainer{
+	width: 4%;
+	height: 4%;
+	top: 48%;/*JS*/
+	left: 48%;
+	position: absolute;
+	animation: joolRotation 42s infinite linear;
+	background-image: url("images/planets/Jool.png");
+	background-size: contain;
+	z-index: 200;
+}
+#jool{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	transform-origin: center;
+}
+ #joolContainer p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: white;
+	text-align: center;
+	top:50%;
+	cursor: pointer;
+ 	width: auto;
+ 	height: auto;
+	transform: translateY(-50%) translateX(-35%);
+ 	position: absolute;
+	visibility: hidden;
+}
+ #joolContainer:hover {
+	animation-play-state:paused;
+}
+ #joolContainer:hover > p{
+	visibility: visible;
+}
+ #joolContainer:hover > #joolCover{
+	visibility: hidden;
+}
+#joolContainer:hover > #jool{
+	transform:scale(4,4);
+}
+@keyframes joolRotation {
+	from{
+		transform: rotate(0deg)
+							translate(1250%)/*radius of the circle, should be set in JS*/
+							rotate(0deg);
+
+	}
+	to{
+		transform: rotate(360deg)
+							translate(1250%)
+							rotate(-360deg);
+	}
+}
+
+/* Eeloo */
+.systemContainer #eelooPath{
+  position:absolute;
+  border-radius: 50%;
+  border: 2px solid #E4F4F7;
+  box-sizing: border-box;
+  width:10%;
+  padding:20%;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+	/*padding = r * 2 */
+}
+ #eelooCover{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #E4F4F7;
+	visibility: visible;
+	position: fixed;
+}
+ #eelooContainer{
+	width: 3.5%;
+	height: 3.5%;
+	top: 48.25%;
+	left: 48.25%;
+	position: absolute;
+	animation: eelooRotation 50s infinite linear;
+	background-image: url("images/planets/Eeloo.png");
+	background-size: contain;
+	z-index: 20;
+}
+#eeloo{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	transform-origin: center;
+}
+ #eelooContainer p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: white;
+	text-align: center;
+	top:50%;
+	cursor: pointer;
+	width: auto;
+	height: auto;
+	transform: translateY(-50%) translateX(-35%);
+	position: absolute;
+	visibility: hidden;
+}
+ #eelooContainer:hover {
+	animation-play-state:paused;
+}
+ #eelooContainer:hover > p{
+	visibility: visible;
+}
+ #eelooContainer:hover > #eelooCover{
+	visibility: hidden;
+}
+#eelooContainer:hover > #eeloo{
+	transform: scale(4,4);
+}
+@keyframes eelooRotation {
+	from{
+		transform: rotate(0deg)
+							translate(1425%)/*radius of the circle, should be set in JS*/
+							rotate(0deg);
+
+	}
+	to{
+		transform: rotate(360deg)
+							translate(1425%)
+							rotate(-360deg);
+	}
+}
+.PlanetContainerBorder #kerbol{
+	height: 100%;
+	width: auto;
+}
+.PlanetContainer:hover{
+	transform: scale(0.9,0.9);
+}
+#navKerbolContainer:hover #kerbol{
+	width: 6%;
+	margin-left: 37%;
+	margin-top: 17%;
+}
+@media screen and (max-width:500px){
+	nav{
+		height: 10%;
+		margin-bottom: 30%;
+		background-image: none;
+	}
+}

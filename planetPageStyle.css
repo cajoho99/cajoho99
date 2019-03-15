@@ -1,0 +1,1142 @@
+/*CSS Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Main Code*/
+sup{
+	/*css reset removes this*/
+	vertical-align: super;
+	font-size: smaller;
+}
+sub{
+	vertical-align: sub;
+	font-size: smaller;
+}
+a, a:hover, a:visited{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: white;
+	text-decoration: none;
+}
+header{
+  background-image: url("images/spaceBackground.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size:contain;
+	z-index: 0;
+	padding-bottom: 1.5%;
+  position: relative;
+}
+#asideNav{
+	position: absolute;
+	width: 10%;
+	padding:2%;
+	top: 0%;
+	left:100%;
+	transform: translateX(-100%);
+}
+#footerNav{
+	top: 100%;
+	left: 0%;
+	height: 5%;
+	width: 20%;
+	position: absolute;
+	transform: translateY(-100%);
+	padding: 3%;
+}
+.backLink{
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	bottom: 50%;
+	transform: translateY(40%);
+}
+.backLink:hover{
+	transform:scale(.8) translateY(42%);
+}
+html, body{
+	height:100%;
+}
+.LinkBorder{
+	top:50%;
+	height: 100%;
+}
+.textSection{
+	width: 100%;
+	height: auto;
+	background-color: #110B31;
+}
+.imageSection{
+	width: 100%;
+	height:90%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position:center;
+	background-repeat: no-repeat;
+}
+.inGameDescription{
+	width: 80%;
+	height: auto;
+	position: relative;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+.information{
+	width: 70%;
+	height: auto;
+	position: relative;
+}
+.asideImage{
+	width: 35%;
+	top:50%;
+	left:100%;
+	transform: translate(-100%, -50%);
+	position: absolute;
+}
+.infoContainer{
+	width: 80%;
+	height: auto;
+	min-height: 50vh;
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	top:50%;
+	left:50%;
+	transform: translate(-50%);
+}
+.information p{
+	margin-bottom: 1.5%;
+}
+
+#planet{
+	width: 100%;
+	transform-origin: 50% 50%;
+	animation: planetRotation 40s infinite linear;
+}
+
+#planetContainer{
+	width: 30%;
+	position: relative;
+	margin-left: 5%;
+}
+.inGameDescription p{
+	margin-bottom: 2.5%;
+	text-align: center;
+	font-style: italic;
+}
+#KerbinImage1{
+	background-image: url("images/Screenshots/kerbin1.png");
+}
+#KerbinImage2{
+	background-image: url("images/Screenshots/kerbin2.png");
+}
+#KerbinImage3{
+	background-image: url("images/Screenshots/kerbin3.png");
+}
+#KerbinImage4{
+	background-image: url("images/Screenshots/kerbin4.png");
+}
+#KerbinImage5{
+	background-image: url("images/Screenshots/Kerbin5.png");
+}
+#MunImage1{
+	background-image: url("images/Screenshots/Mun1.png");
+}
+#MunImage2{
+	background-image: url("images/Screenshots/Mun2.png");
+}
+#MunImage3{
+	background-image: url("images/Screenshots/Mun3.png");
+}
+#MunImage4{
+	background-image: url("images/Screenshots/Mun4.png");
+}
+#MinmusImage1{
+	background-image: url("images/Screenshots/minmus1.png");
+}
+#MinmusImage2{
+	background-image: url("images/Screenshots/Minmus2.png");
+}
+#MinmusImage3{
+	background-image: url("images/Screenshots/Minmus3.png");
+}
+#MinmusImage4{
+	background-image: url("images/Screenshots/Minmus4.png");
+}
+#DunaImage1{
+	background-image: url("images/Screenshots/Duna1.png");
+}
+#DunaImage2{
+	background-image: url("images/Screenshots/Duna2.png");
+}
+#DunaImage3{
+	background-image: url("images/Screenshots/Duna3.png");
+}
+#DunaImage4{
+	background-image: url("images/Screenshots/Duna4.png");
+}
+#DunaImage5{
+	background-image: url("images/Screenshots/Duna5.png");
+}
+#IkeImage1{
+	background-image: url("images/Screenshots/Ike1.png");
+}
+#IkeImage2{
+	background-image: url("images/Screenshots/Ike2.png");
+}
+#IkeImage3{
+	background-image: url("images/Screenshots/Ike3.png");
+}
+#IkeImage4{
+	background-image: url("images/Screenshots/Ike4.png");
+}
+#EveImage1{
+	background-image: url("images/Screenshots/Eve1.png");
+}
+#EveImage2{
+	background-image: url("images/Screenshots/Eve2.png");
+}
+#EveImage3{
+	background-image: url("images/Screenshots/Eve3.png");
+}
+#EveImage4{
+	background-image: url("images/Screenshots/Eve4.png");
+}
+#EveImage5{
+	background-image: url("images/Screenshots/Eve5.png");
+}
+#GillyImage1{
+	background-image: url("images/Screenshots/Gilly1.png");
+}
+#GillyImage2{
+	background-image: url("images/Screenshots/Gilly2.png");
+}
+#GillyImage3{
+	background-image: url("images/Screenshots/Gilly3.png");
+}
+#GillyImage4{
+	background-image: url("images/Screenshots/Gilly4.png");
+}
+#MohoImage1{
+	background-image: url("images/Screenshots/Moho1.png");
+}
+#MohoImage2{
+	background-image: url("images/Screenshots/Moho2.png");
+}
+#MohoImage3{
+	background-image: url("images/Screenshots/Moho3.png");
+}
+#MohoImage4{
+	background-image: url("images/Screenshots/Moho4.png");
+}
+#DresImage1{
+	background-image: url("images/Screenshots/Dres1.png");
+}
+#DresImage2{
+	background-image: url("images/Screenshots/Dres2.png");
+}
+#DresImage3{
+	background-image: url("images/Screenshots/Dres3.png");
+}
+#DresImage4{
+	background-image: url("images/Screenshots/Dres4.png");
+}
+#EelooImage1{
+	background-image: url("images/Screenshots/Eeloo1.png");
+}
+#EelooImage2{
+	background-image: url("images/Screenshots/Eeloo2.png");
+}
+#EelooImage3{
+	background-image: url("images/Screenshots/Eeloo3.png");
+}
+#EelooImage4{
+	background-image: url("images/Screenshots/Eeloo4.png");
+}
+#JoolImage1{
+	background-image: url("images/Screenshots/Jool1.png");
+}
+#JoolImage2{
+	background-image: url("images/Screenshots/Jool2.png");
+}
+#JoolImage3{
+	background-image: url("images/Screenshots/Jool3.png");
+}
+#JoolImage4{
+	background-image: url("images/Screenshots/Jool4.png");
+}
+#JoolImage5{
+	background-image: url("images/Screenshots/Jool5.png");
+}
+#LaytheImage1{
+	background-image: url("images/Screenshots/Laythe1.png");
+}
+#LaytheImage2{
+	background-image: url("images/Screenshots/Laythe2.png");
+}
+#LaytheImage3{
+	background-image: url("images/Screenshots/Laythe3.png");
+}
+#LaytheImage4{
+	background-image: url("images/Screenshots/Laythe4.png");
+}
+#LaytheImage5{
+	background-image: url("images/Screenshots/Laythe5.png");
+}
+#VallImage1{
+	background-image: url("images/Screenshots/Vall1.png");
+}
+#VallImage2{
+	background-image: url("images/Screenshots/Vall2.png");
+}
+#VallImage3{
+	background-image: url("images/Screenshots/Vall3.png");
+}
+#VallImage4{
+	background-image: url("images/Screenshots/Vall4.png");
+}
+#TyloImage1{
+	background-image: url("images/Screenshots/Tylo1.png");
+}
+#TyloImage2{
+	background-image: url("images/Screenshots/Tylo2.png");
+}
+#TyloImage3{
+	background-image: url("images/Screenshots/Tylo3.png");
+}
+#TyloImage4{
+	background-image: url("images/Screenshots/Tylo4.png");
+}
+#BopImage1{
+	background-image: url("images/Screenshots/Bop1.png");
+}
+#BopImage2{
+	background-image: url("images/Screenshots/Bop2.png");
+}
+#BopImage3{
+	background-image: url("images/Screenshots/Bop3.png");
+}
+#BopImage4{
+	background-image: url("images/Screenshots/Bop4.png");
+}
+#PolImage1{
+	background-image: url("images/Screenshots/Pol1.png");
+}
+#PolImage2{
+	background-image: url("images/Screenshots/Pol2.png");
+}
+#PolImage3{
+	background-image: url("images/Screenshots/Pol3.png");
+}
+#PolImage4{
+	background-image: url("images/Screenshots/Pol4.png");
+}
+#KerbolImage1{
+	background-image: url("images/Screenshots/Kerbol1.png");
+}
+#KerbolImage2{
+	background-image: url("images/Screenshots/Kerbol2.png");
+}
+#KerbolImage3{
+	background-image: url("images/Screenshots/Kerbol3.png");
+}
+#KerbolImage4{
+	background-image: url("images/Screenshots/Kerbol4.png");
+}
+
+
+
+#gillyPath{
+	border-color: #AC9485;
+}
+#ikePath{
+	border-color: #8C8C8C;
+}
+#munPath{
+	border-color: #646665;
+}
+#minmusPath{
+	border-color: #99CEBA;
+}
+#laythePath{
+	border-color: #2D2F49;
+}
+#vallPath{
+	border-color: #5A6F72;
+}
+#tyloPath{
+	border-color: #ADA699;
+}
+#bopPath{
+	border-color: #51453B
+}
+#polPath{
+	border-color: #E0B984;
+}
+
+#gillyCover{
+	transform:scale(1.1,1.1);
+	background-color: #AC9485;
+}
+#ikeCover{
+	background-color: #8C8C8C;
+}
+#munCover{
+	background-color: #646665;
+}
+#minmusCover{
+	background-color: #99CEBA;
+}
+#laytheCover{
+	background-color: #2D2F49;
+}
+#vallCover{
+	background-color: #5A6F72;
+}
+#tyloCover{
+	background-color: #ADA699;
+}
+#bopCover{
+	background-color: #51453B
+}
+#polCover{
+	background-color: #E0B984;
+}
+
+
+header h1{
+	margin-left: 3%;
+	padding-top: 3%;
+	width: 25%;
+	position: absolute;
+}
+#systemContainer{
+	top: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	position: relative;
+	width: 60%;
+	height:80%;
+	z-index: 2;
+}
+#systemContainer .mainPlanet{
+	width: 100%;
+	transform-origin: 50% 50%;
+	animation: planetRotation 10s infinite linear;
+}
+#systemContainer .mainPlanetContainer {
+  width: 6%;
+  position:absolute;
+  left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	z-index: 8;
+}
+#systemContainer .mainPlanetContainer:hover > .mainPlanet{
+	animation-play-state: paused;
+}
+#systemContainer .mainPlanetContainer:hover{
+	transform:translate(-50%, -50%) scale(1.2,1.2);
+}
+
+@keyframes planetRotation {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(360deg);
+		}
+}
+.moon1Path{
+  position:absolute;
+  border-radius: 50%;
+  border: 2px solid;
+  box-sizing: border-box;
+  width:10%;
+  padding:8%;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+	/*padding = r / 2*/
+}
+#moon1Container{
+ width: 12%;
+ height: 12%;
+ top: 44%;
+ left: 44%;
+ position: absolute;
+ animation: moon1Rotation 20s infinite linear;
+ background-size: contain;
+ z-index: 200;
+}
+#moon1Image{
+	position: absolute;
+	width: 100%;
+	height:100%;
+}
+.moon1Cover{
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: 50%;
+ background-color: #646665;
+ visibility: visible;
+ position: absolute;
+}
+#moon1Container p{
+ 	text-align: center;
+ 	top:50%;
+ 	cursor: pointer;
+ 	width: auto;
+ 	height: auto;
+	transform: translateY(-50%) translateX(-20%);
+ 	position: absolute;
+ 	visibility: hidden;
+}
+#moon1Container:hover {
+ animation-play-state:paused;
+}
+#moon1Container:hover > #moon1Image{
+
+	transform-origin: center;
+	transform: scale(3.5,3.5) translate(0%, 0%);
+}
+#moon1Container:hover > p{
+ visibility: visible;
+}
+#moon1Container:hover > .moon1Cover{
+ visibility: hidden;
+}
+@keyframes moon1Rotation {
+  from{
+    transform: rotate(0deg)
+              translate(415%)/*radius of the circle, should be set in JS*/
+              rotate(0deg);
+
+  }
+  to{
+    transform: rotate(360deg)
+              translate(415%)
+              rotate(-360deg);
+  }
+}
+
+
+.moon2Path{
+  position:absolute;
+  border-radius: 50%;
+  border: 2px solid;
+  box-sizing: border-box;
+  width:12%;
+  padding:12%;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	z-index: 4;
+	/*padding = r / 2*/
+}
+#moon2Container{
+ width: 8%;
+ height: 8%;
+ top: 46%;
+ left: 46%;
+ position: absolute;
+ animation: moon2Rotation 30s infinite linear;
+ background-size: contain;
+ z-index: 200;
+}
+#moon2Image{
+	position: absolute;
+	width: 100%;
+	height:100%;
+}
+.moon2Cover{
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: 50%;
+ background-color: #646665;
+ visibility: visible;
+ position: absolute;
+}
+#moon2Container p{
+ 	text-align: center;
+ 	top:50%;
+ 	cursor: pointer;
+ 	width: auto;
+ 	height: auto;
+	transform: translateY(-50%) translateX(-20%);
+ 	position: absolute;
+ 	visibility: hidden;
+}
+#moon2Container:hover {
+ animation-play-state:paused;
+}
+#moon2Container:hover > #moon2Image{
+
+	transform-origin: center;
+	transform: scale(3.5,3.5) translate(0%, 0%);
+}
+#moon2Container:hover > p{
+ visibility: visible;
+}
+#moon2Container:hover > .moon2Cover{
+ visibility: hidden;
+}
+@keyframes moon2Rotation {
+  from{
+    transform: rotate(0deg)
+              translate(622.5%)/*radius of the circle, should be set in JS*/
+              rotate(0deg);
+
+  }
+  to{
+    transform: rotate(360deg)
+              translate(622.5%)
+              rotate(-360deg);
+  }
+}
+
+
+.moon3Path{
+  position:absolute;
+  border-radius: 50%;
+  border: 2px solid;
+  box-sizing: border-box;
+  width:10%;
+  padding:16%;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	/*padding = r / 2*/
+}
+#moon3Container{
+ width: 6%;
+ height: 6%;
+ top: 47%;
+ left: 47%;
+ position: absolute;
+ animation: moon3Rotation 40s infinite linear;
+ background-size: contain;
+ z-index: 200;
+}
+#moon3Image{
+	position: absolute;
+	width: 100%;
+	height:100%;
+}
+.moon3Cover{
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: 50%;
+ background-color: #646665;
+ visibility: visible;
+ position: absolute;
+}
+#moon3Container p{
+	text-align: center;
+ 	top:50%;
+ 	cursor: pointer;
+ 	width: auto;
+ 	height: auto;
+	transform: translateY(-50%) translateX(-20%);
+ 	position: absolute;
+ 	visibility: hidden;
+}
+#moon3Container:hover {
+ animation-play-state:paused;
+}
+#moon3Container:hover > #moon3Image{
+
+	transform-origin: center;
+	transform: scale(3.5,3.5) translate(0%, 0%);
+}
+#moon3Container:hover > p{
+ visibility: visible;
+}
+#moon3Container:hover > .moon3Cover{
+ visibility: hidden;
+}
+@keyframes moon3Rotation {
+  from{
+    transform: rotate(0deg)
+              translate(830%)/*radius of the circle, should be set in JS*/
+              rotate(0deg);
+
+  }
+  to{
+    transform: rotate(360deg)
+              translate(830%)
+              rotate(-360deg);
+  }
+}
+
+
+.moon4Path{
+  position:absolute;
+  border-radius: 50%;
+  border: 2px solid;
+  box-sizing: border-box;
+  width:10%;
+  padding:20%;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	/*padding = r * 2*/
+}
+ #moon4Container{
+	width: 5%;
+	height: 5%;
+	top: 47.5%;/*JS*/
+	left: 47.5%;
+	position: absolute;
+	animation: moon4Rotation 50s infinite linear;
+	background-size: contain;
+	z-index: 200;
+}
+#moon4Image{
+	position: absolute;
+	width: 100%;
+	height:100%;
+}
+ .moon4Cover{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #99CEBA;
+	visibility: visible;
+	position: absolute;
+}
+ #moon4Container p{
+
+	text-align: center;
+	top:50%;
+	cursor: pointer;
+	width: auto;
+	height: auto;
+	transform: translateY(-60%) translateX(-35%);
+	position: absolute;
+	visibility: hidden;
+}
+ #moon4Container:hover {
+	animation-play-state:paused;
+}
+#moon4Container:hover > #moon4Image{
+
+	transform-origin: center;
+	transform: scale(4,4);
+}
+ #moon4Container:hover > p{
+	visibility: visible;
+}
+ #moon4Container:hover > .moon4Cover{
+	visibility: hidden;
+}
+@keyframes moon4Rotation {
+	from{
+		transform: rotate(0deg)
+							translate(1005%)/*radius of the circle, should be set in JS*/
+							rotate(0deg);
+
+	}
+	to{
+		transform: rotate(360deg)
+							translate(1005%)
+							rotate(-360deg);
+	}
+}
+
+.moon5Path{
+  position:absolute;
+  border-radius: 50%;
+  border: 2px solid;
+  box-sizing: border-box;
+  width:10%;
+  padding:24%;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	/*padding = r / 2*/
+}
+#moon5Container{
+ width: 4%;
+ height: 4%;
+ top: 48%;
+ left: 48%;
+ position: absolute;
+ animation: moon5Rotation 60s infinite linear;
+ background-size: contain;
+ z-index: 200;
+}
+#moon5Image{
+	position: absolute;
+	width: 100%;
+	height:100%;
+}
+.moon5Cover{
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: 50%;
+ background-color: #646665;
+ visibility: visible;
+ position: absolute;
+}
+#moon5Container p{
+ 	text-align: center;
+ 	top:50%;
+ 	cursor: pointer;
+ 	width: auto;
+ 	height: auto;
+	transform: translateY(-50%) translateX(-20%);
+ 	position: absolute;
+ 	visibility: hidden;
+}
+#moon5Container:hover {
+ animation-play-state:paused;
+}
+#moon5Container:hover > #moon5Image{
+
+	transform-origin: center;
+	transform: scale(3.5,3.5) translate(0%, 0%);
+}
+#moon5Container:hover > p{
+ visibility: visible;
+}
+#moon5Container:hover > .moon5Cover{
+ visibility: hidden;
+}
+@keyframes moon5Rotation {
+  from{
+    transform: rotate(0deg)
+              translate(1260%)/*radius of the circle, should be set in JS*/
+              rotate(0deg);
+
+  }
+  to{
+    transform: rotate(360deg)
+              translate(1260%)
+              rotate(-360deg);
+  }
+}
+
+
+#navContainer{
+	width: 100%;
+	height:100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+#SmallNavContainer{
+	width: 100%;
+	height:100%;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction:column;
+	align-items: center;
+}
+.PlanetContainerBorder{
+	width: 100%;
+	position: relative;
+}
+.SmallPlanetContainerBorder{
+	width: 40%;
+	position: relative;
+}
+.MoonContainer{
+	top:20%;
+	left:50%;
+	transform: translateX(-50%);
+	width: 40%;
+	padding: 8.6%;
+	position: relative;
+}
+.SmallMoonContainer{
+	transform-origin: center;
+	left:50%;
+	transform: translateX(-50%);
+	width: 20%;
+	padding: 10.3% 0;
+	position: relative;
+}
+#navPlanetContainer{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	top: 0%;
+	left:100%;
+	transform: translateX(-100%);
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+#SmallNavPlanetContainer{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	top: 0%;
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	flex-direction: column;
+}
+#BelowNav{
+	position: relative;
+	width: 100%;
+	padding:2%;
+	background-color:#110B31;
+	display: none;
+}
+.navTitle{
+	text-align: center;
+	margin-bottom: 20%;
+}
+.MoonContainer:hover{
+	transform: scale(1.2,1.2) translateX(-40%);
+}
+.SmallMoonContainer:hover{
+	transform: scale(1.2,1.2)translateX(-40%);
+}
+
+
+@media screen and (min-width:900px){
+	footer{
+		width: 100%;
+		height: 200px;
+		background-color: #110B31;
+	}
+	footer p{
+		font-size: 18px;
+		text-align: center;
+		display: block;
+		line-height: 150%;
+		position: relative;
+		transform: translateY(75%);
+	}
+
+	p{
+		font-family: Arial, Helvetica, sans-serif;
+	 	font-size: 22px;
+	 	color: white;
+	}
+	td{
+		font-family: Arial, Helvetica, sans-serif;
+	 	font-size: 22px;
+	 	color: white;
+	}
+	tr{
+		line-height: 200%;
+	}
+	table{
+		border-collapse: separate;
+		width: 100%;
+		height: 60%;
+		border-spacing: 1% 0%;
+	}
+	h1{
+		font-family: Arial, Helvetica, sans-serif;
+	 	font-size: 120px;
+	 	color: white;
+	}
+	h2{
+		font-family: Arial, Helvetica, sans-serif;
+	 	font-size: 44px;
+	 	color: white;
+	}
+	a{
+		font-family: Arial, Helvetica, sans-serif;
+	 	font-size: 22px;
+	 	color: white;
+		text-decoration: none;
+	}
+	#systemContainer{
+		width: 60%;
+	}
+	.MoonContainer{
+		margin-bottom: 22px;
+	}
+}
+@media screen and (max-width:900px){
+	footer{
+		width: 100%;
+		height: 150px;
+		background-color: #110B31;
+	}
+	footer p{
+		font-size: 14px;
+		text-align: center;
+		display: block;
+		line-height: 150%;
+		position: relative;
+		transform: translateY(75%);
+	}
+
+	p{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 17px;
+		color: white;
+	}
+	td{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 17px;
+		color: white;
+	}
+	tr{
+		line-height: 150%;
+	}
+	table{
+		border-collapse: separate;
+		width: 100%;
+		height: 60%;
+		border-spacing: 1% 0%;
+	}
+	#footerNav{
+		width: 40%;
+	}
+	h1{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 90px;
+		color: white;
+	}
+	h2{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 48px;
+		color: white;
+	}
+	a{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 17px;
+		color: white;
+		text-decoration: none;
+	}
+	#systemContainer{
+		width: 70%;
+	}
+	.MoonContainer{
+		margin-bottom: 17px;
+	}
+}
+@media screen and (max-width:500px){
+	footer{
+		width: 100%;
+		height: 150px;
+		background-color: #110B31;
+	}
+	footer p{
+		font-size: 14px;
+		text-align: center;
+		display: block;
+		line-height: 150%;
+		position: relative;
+		transform: translateY(75%);
+	}
+
+	p{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 17px;
+		color: white;
+	}
+	td{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 17px;
+		color: white;
+	}
+	tr{
+		line-height: 150%;
+	}
+	table{
+		border-collapse: separate;
+		width: 100%;
+		height: 60%;
+		border-spacing: 1% 0%;
+	}
+	h1{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 90px;
+		color: white;
+	}
+	h2{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 48px;
+		color: white;
+	}
+	a{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 17px;
+		color: white;
+		text-decoration: none;
+	}
+	#systemContainer{
+		width: 140%;
+	}
+	.MoonContainer{
+		margin-bottom: 17px;
+	}
+	.asideImage{
+			display: none;
+	}
+	#asideNav{
+		display: none;
+	}
+	#BelowNav{
+		display:flex;
+	}
+}
